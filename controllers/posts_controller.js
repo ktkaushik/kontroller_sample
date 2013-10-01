@@ -1,8 +1,8 @@
 var kontroller = require('kontroller'),
   Driver = kontroller.BaseController.constructClass();
 
-  before(think, {only: 'accelerate'});
-// define action
+before(think, {only: 'accelerate'});
+
 exports.accelerate = Driver.actions.accelerate = function accelerate(req, res, next) {
     res.send('accelerating!');
 };
