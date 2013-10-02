@@ -1,7 +1,7 @@
 var kontroller = require('kontroller'),
-  Driver = kontroller.BaseController.constructClass();
+  Driver = kontroller.BaseController.constructClass('posts_controller');
 
-before(think, {only: 'accelerate'});
+Driver.before(think, {only: 'accelerate'});
 
 exports.accelerate = Driver.actions.accelerate = function accelerate(req, res, next) {
     res.send('accelerating!');
